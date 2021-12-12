@@ -30,5 +30,31 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+        private void EnterButton_Click(object sender, EventArgs e)
+        {
+            String loginUser = LoginFild.Text;
+            String passUser = PasswordFild.Text;
+
+            DB db = new DB();
+            DataTable tabel = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE login = @uL and pass= @uP", db.getConnection());
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            adapter.SelectCommand = command;
+            adapter.Fill(tabel);
+
+            if (tabel.Rows.Count > 0)
+            {
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+            }
+
+            else
+                MessageBox.Show("Непрвильный логин или пароль");
+        }
     }
 }
