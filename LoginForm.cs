@@ -11,5 +11,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    
+    private void PasswordFild_Enter(object sender, EventArgs e)
+    {
+        if (PasswordFild.Text == "Пароль...")
+        {
+            PasswordFild.Text = "";
+            PasswordFild.ForeColor = Color.Black;
+        }
+
+    }
+
 }
