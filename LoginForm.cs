@@ -29,5 +29,13 @@ namespace WindowsFormsApp1
         }
 
     }
+    Point lastPoint;
+    private void label1_MouseMove(object sender, MouseEventArgs e)
+    {
+        if (e.Button == MouseButtons.Left)
+        {
+            this.Left += e.X - lastPoint.X;
+            this.Top += e.Y - lastPoint.Y;
+        }
 
-}
+    }
