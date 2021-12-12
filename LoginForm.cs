@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         private void exitButton_MouseEnter(object sender, EventArgs e)
         {
-            exitButton.BackColor = Color.Red;
+            exitButton.BackColor = Color.Red; // iskl
         }
 
         private void exitButton_MouseLeave(object sender, EventArgs e)
