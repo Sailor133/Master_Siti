@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class LoginForm : System.Windows.Forms.Form
     {
-        //Login Form
+
         public LoginForm()
         {
             InitializeComponent();
@@ -57,4 +57,35 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Непрвильный логин или пароль");
         }
     }
+    private void exitButton_MouseEnter(object sender, EventArgs e)
+    {
+        exitButton.BackColor = Color.Red; // iskl // кнопка выхода
+    }
+
+    private void exitButton_MouseLeave(object sender, EventArgs e)
+    {
+        exitButton.BackColor = Color.FromArgb(255, 18, 25, 49); // кнопка заднего цвета 
+    }
+
+
+    private void LoginFild_Enter(object sender, EventArgs e)
+    {
+        if (LoginFild.Text == "Логин...") // логин форма
+        {
+            LoginFild.ForeColor = Color.Black;
+            LoginFild.Text = "";
+        }
+
+    }
+
+    private void LoginFild_Leave(object sender, EventArgs e)
+    {
+        if (LoginFild.Text == "")           // серый цвет 
+        {
+            LoginFild.Text = "Логин...";
+            LoginFild.ForeColor = Color.Gray;
+        }
+
+    }
 }
+
