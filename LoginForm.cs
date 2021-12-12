@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class LoginForm : System.Windows.Forms.Form
     {
-
+        //Login Form
         public LoginForm()
         {
             InitializeComponent();
