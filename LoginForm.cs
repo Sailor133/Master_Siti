@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+<<<<<<< HEAD
     private void PasswordFild_Enter(object sender, EventArgs e)
     {
         if (PasswordFild.Text == "Пароль...")
@@ -41,6 +42,37 @@ namespace WindowsFormsApp1
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+
+     public partial class LoginForm : System.Windows.Forms.Form
+    {
+        private void exitButton_MouseEnter(object sender, EventArgs e)
+        {
+            exitButton.BackColor = Color.Red; // iskl // кнопка выхода
+        }
+
+        private void exitButton_MouseLeave(object sender, EventArgs e)
+        {
+            exitButton.BackColor = Color.FromArgb(255, 18, 25, 49); // кнопка заднего цвета 
+        }
+
+
+        private void LoginFild_Enter(object sender, EventArgs e)
+        {
+            if (LoginFild.Text == "Логин...") // логин форма
+            {
+                LoginFild.ForeColor = Color.Black;
+                LoginFild.Text = "";
+            }
+
+        }
+
+        private void LoginFild_Leave(object sender, EventArgs e)
+        { 
+            if (LoginFild.Text == "")           // серый цвет 
+            {
+                LoginFild.Text = "Логин...";
+                LoginFild.ForeColor = Color.Gray;
+            }
         }
     }
 }
