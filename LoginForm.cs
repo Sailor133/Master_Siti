@@ -13,5 +13,14 @@ namespace WindowsFormsApp1
 {
     public partial class LoginForm : System.Windows.Forms.Form
     {
-       
+
+        public LoginForm()
+        {
+            InitializeComponent();
+            LoginFild.Text = "Логин...";
+            LoginFild.ForeColor = Color.Gray;
+            PasswordFild.ForeColor = Color.Gray;
+            PasswordFild.Text = "Пароль...";
+        }
+    }
 }
