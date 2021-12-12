@@ -20,5 +20,14 @@ namespace WindowsFormsApp1
         }
 
     }
+    private void PasswordFild_Leave(object sender, EventArgs e)
+    {
+        if (PasswordFild.Text == "")
+        {
+            PasswordFild.Text = "Пароль...";
+            PasswordFild.ForeColor = Color.Gray;
+        }
+
+    }
 
 }
