@@ -22,5 +22,13 @@ namespace WindowsFormsApp1
             PasswordFild.ForeColor = Color.Gray;
             PasswordFild.Text = "Пароль...";
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
