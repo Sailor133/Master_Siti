@@ -38,4 +38,9 @@ namespace WindowsFormsApp1
             this.Top += e.Y - lastPoint.Y;
         }
 
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
     }
+}
