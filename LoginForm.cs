@@ -15,25 +15,32 @@ namespace WindowsFormsApp1
     {
         private void exitButton_MouseEnter(object sender, EventArgs e)
         {
-            
+            exitButton.BackColor = Color.Red;
         }
 
         private void exitButton_MouseLeave(object sender, EventArgs e)
         {
-          
+            exitButton.BackColor = Color.FromArgb(255, 18, 25, 49);
         }
 
 
         private void LoginFild_Enter(object sender, EventArgs e)
         {
-            
-            
+            if (LoginFild.Text == "Логин...")
+            {
+                LoginFild.ForeColor = Color.Black;
+                LoginFild.Text = "";
+            }
 
         }
 
         private void LoginFild_Leave(object sender, EventArgs e)
         {
-           
+            if (LoginFild.Text == "")
+            {
+                LoginFild.Text = "Логин...";
+                LoginFild.ForeColor = Color.Gray;
+            }
 
         }
     }
